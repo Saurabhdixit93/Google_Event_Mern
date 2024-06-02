@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Clash Display Bold';
+    src: url('assets/font/ClashDisplayBold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display Medium';
+    src: url('assets/font/ClashDisplayMedium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clash Display Regular';
+    src: url('assets/font/ClashDisplayRegular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Clash Display Regular" !important;
+}
+
+.class-display-bold {
+    font-family: "Clash Display Bold" !important;
+}
+
+.tooltip {
+    @apply absolute left-1/2 transform -translate-x-1/2 top-full mt-2 opacity-0 scale-75 transition-opacity transition-transform duration-200;
+    @apply bg-gray-900 dark:bg-white dark:text-black text-white text-xs font-medium py-1 px-2 rounded;
+}
+
+.group:hover .tooltip {
+    @apply opacity-100 scale-100;
+}
+
+.fc-daygrid-day-number,
+.fc-toolbar-title,
+.fc-event,
+.fc-event-start,
+.fc-event-end,
+.fc-event-future,
+.fc-daygrid-event,
+.fc-daygrid-dot-event {
+    @apply dark:text-white text-black !important;
+}
+
+.fc-col-header-cell-cushion {
+    @apply dark:text-white !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
